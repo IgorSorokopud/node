@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 
-http.createServer(function (req, res) {
+var server = new http.Server(function (req, res) {
 
     if (req.url == '/') {
 
@@ -19,3 +19,13 @@ http.createServer(function (req, res) {
     } else { /*  404  */ }
 
 }).listen(3000);
+
+setTimeout(function() {
+    server.close();
+}, 2500);
+
+var timer = setInterval(function() {
+   console.log(process.memoryUsage());
+}, 1000);
+
+timer.unref();
