@@ -16,16 +16,17 @@ var server = new http.Server(function (req, res) {
             res.end(info);
         });
 
-    } else { /*  404  */ }
+    } else { /*  404  */
+    }
 
 }).listen(3000);
 
-setTimeout(function() {
+setTimeout(function () {
     server.close();
 }, 2500);
 
-var timer = setInterval(function() {
-   console.log(process.memoryUsage());
+var timer = setInterval(function () {
+    console.log(process.memoryUsage());
 }, 1000);
 
 timer.unref();
