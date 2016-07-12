@@ -16,8 +16,7 @@ var server = new http.Server(function (req, res) {
             res.end(info);
         });
 
-    } else { /*  404  */
-    }
+    } else { /*  404  */ }
 
 }).listen(3000);
 
