@@ -1,4 +1,3 @@
-
 var log = require('logger')(module);
 var db = require('db');
 db.connect();
