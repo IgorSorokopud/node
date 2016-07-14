@@ -1,8 +1,7 @@
-
 var http = require('http');
 var url = require('url');
 
-var server = new http.Server(function(reg, res) {
+var server = new http.Server(function (reg, res) {
 
     var urlParsed = url.parse(reg.url, true);
 
